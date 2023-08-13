@@ -1,0 +1,19 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "In this project, we use a MongoDB database to store our data. The database has 3 main Collections: videos, products, and comments. the videos collection stores information about videos, the products collection stores information from the list of products, and the comments collection stores comments from a video. The structure of the collections is as follows:",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "moment": "^2.29.4",
+    "mongoose": "^7.4.1"
+  }
+}
