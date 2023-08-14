@@ -2,7 +2,7 @@
 
 ## Database Structure
 
-This project employs a MongoDB database to store data, organized into three main collections: videos, products, and comments. The *videos* collection stores information about videos, the *products* collection stores details about products, and the *comments* collection holds comments related to videos. Here's an overview of the collection structures:
+This project employs a MongoDB database to store data, organized into three main collections: videos, products, and comments. The _videos_ collection stores information about videos, the _products_ collection stores details about products, and the _comments_ collection holds comments related to videos. Here's an overview of the collection structures:
 
 ## Features
 
