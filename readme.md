@@ -41,7 +41,7 @@ npm start
 
 For the second option, add the following command in the package.json file within the `scripts` section:
 
-```json
+```
 "start": "nodemon index.js"
 ```
 
@@ -60,7 +60,7 @@ Launch the server, which will run on the specified port (e.g., `localhost:5000`)
 
 ### Videos Collection
 
-```json
+```
 {
   video_title: String,
   video_url: String,
@@ -71,7 +71,7 @@ Launch the server, which will run on the specified port (e.g., `localhost:5000`)
 
 ### Products Collection
 
-```json
+```
 {
   video_id: String,
   name: String,
@@ -83,7 +83,7 @@ Launch the server, which will run on the specified port (e.g., `localhost:5000`)
 
 ### Comments Collection
 
-```json
+```
 {
   video_id: String,
   username: String,
@@ -120,7 +120,7 @@ Retrieve all videos from the database.
   Content-Type: application/json
 - **Success Response (Code: 200)**
 
-```json
+```
 {
   data: [
     {
@@ -146,7 +146,7 @@ Retrieve videos associated with the specified ID.
   Content-Type: application/json
 - **Success Response (Code: 200)**
 
-```json
+```
 {
   data: [
     {
@@ -172,7 +172,7 @@ Retrieve all products from the database.
   Content-Type: application/json
 - **Success Response (Code: 200)**
 
-```json
+```
 {
   data: [
     [
@@ -200,7 +200,7 @@ Retrieve all comments from the database related to a certain video ID.
   Content-Type: application/json
 - **Success Response (Code: 200)**
 
-```json
+```
 {
   data: [
     {
@@ -221,7 +221,7 @@ Create a new video.
   None
 - **Data Params**
 
-```json
+```
 {
   video_title: String,
   video_url: String,
@@ -234,7 +234,7 @@ Create a new video.
   Content-Type: application/json
 - **Success Response (Code: 201)**
 
-```json
+```
 {
   data: {
     video_title,
@@ -253,7 +253,7 @@ Create a new product.
   None
 - **Data Params**
 
-```json
+```
 {
   video_id: String,
   name: String,
@@ -267,7 +267,7 @@ Create a new product.
   Content-Type: application/json
 - **Success Response (Code: 201)**
 
-```json
+```
 {
   data: {
     name,
@@ -285,7 +285,7 @@ Create a new comment.
   None
 - **Data Params**
 
-```json
+```
 {
   video_id: String,
   username: String,
@@ -298,7 +298,7 @@ Create a new comment.
   Content-Type: application/json
 - **Success Response (Code: 201)**
 
-```json
+```
 {
   data: {
     video_id,
