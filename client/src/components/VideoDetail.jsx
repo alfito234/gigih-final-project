@@ -20,7 +20,9 @@ const VideoDetail = () => {
   }, []);
 
   const getVideoById = async () => {
-    const response = await axios.get(`http://localhost:5000/videos/${id}`);
+    const response = await axios.get(
+      `${import.meta.env.VITE_API_URL}/videos/${id}`
+    );
     setVideoTitle(response.data.video_title);
     setVideoUrl(response.data.video_url);
     setShopName(response.data.shop_name);
@@ -28,14 +30,14 @@ const VideoDetail = () => {
 
   const getProductsById = async () => {
     const response = await axios.get(
-      `http://localhost:5000/videos/${id}/product`
+      `${import.meta.env.VITE_API_URL}/videos/${id}/product`
     );
     setProducts(response.data);
   };
 
   const getCommentsById = async () => {
     const response = await axios.get(
-      `http://localhost:5000/videos/${id}/comment`
+      `${import.meta.env.VITE_API_URL}/videos/${id}/comment`
     );
     setComments(response.data);
   };
@@ -43,7 +45,7 @@ const VideoDetail = () => {
   const addComment = async (comment, username) => {
     console.log("add Comment", comment, username);
     const response = await axios.post(
-      `http://localhost:5000/videos/${id}/comment`,
+      `${import.meta.env.VITE_API_URL}/videos/${id}/comment`,
       {
         video_id: id,
         username: username,

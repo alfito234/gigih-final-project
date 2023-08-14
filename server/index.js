@@ -1,9 +1,10 @@
 import express from "express";
-import mongoose, { Mongoose } from "mongoose";
+import mongoose from "mongoose";
 import cors from "cors";
 import VideoRoutes from "./routes/VideoRoutes.js";
 import CommentRoutes from "./routes/CommentRoutes.js";
 import ProductRoutes from "./routes/ProductRoutes.js";
+import UserRoutes from "./routes/UserRoutes.js";
 
 const app = express();
 mongoose.connect("mongodb://localhost:27017/tokoplay_db", {
@@ -24,6 +25,7 @@ app.use(express.json());
 app.use(VideoRoutes);
 app.use(CommentRoutes);
 app.use(ProductRoutes);
+app.use(UserRoutes);
 
 const port = 5000;
 

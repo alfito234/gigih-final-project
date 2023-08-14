@@ -4,7 +4,9 @@ import Video from "../models/VideoModel.js";
 export const getComments = async (req, res) => {
   try {
     const video_id = req.params.id;
-    const comment = await Comment.find({ video_id: video_id }).exec();
+    const comment = await Comment.find({
+      video_id: video_id,
+    }).exec();
     res.json(comment);
   } catch (error) {
     res.status(500).json({ message: error.message });

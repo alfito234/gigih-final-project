@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import VideoDetail from "./components/VideoDetail";
+import Login from "./components/Login";
 
 function App() {
   return (
@@ -10,19 +11,27 @@ function App() {
         <Route
           path='/'
           element={
-            <div className='max-h-screen'>
+            <>
               <Navbar />
               <Home />
-            </div>
+            </>
           }
         />
         <Route
           path='/videos/:id'
           element={
-            <div className='max-h-screen'>
+            <>
               <Navbar />
               <VideoDetail />
-            </div>
+            </>
+          }
+        />
+        <Route
+          path='/login'
+          element={
+            <>
+              <Login />
+            </>
           }
         />
       </Routes>
