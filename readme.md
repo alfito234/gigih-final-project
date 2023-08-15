@@ -16,8 +16,12 @@ Required:
 Additional:
 
 - Insert video
+- Get videos
 - Get a video
 - Insert product
+- Get products
+- Insert comment
+- Get commments
 
 ## How to install & run project
 
