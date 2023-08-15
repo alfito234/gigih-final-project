@@ -5,9 +5,13 @@ import VideoRoutes from "./routes/VideoRoutes.js";
 import CommentRoutes from "./routes/CommentRoutes.js";
 import ProductRoutes from "./routes/ProductRoutes.js";
 import UserRoutes from "./routes/UserRoutes.js";
+import "dotenv/config";
+
+const DB_URI = process.env.DB_URI;
+const PORT = process.env.PORT || 5000;
 
 const app = express();
-mongoose.connect("mongodb://localhost:27017/tokoplay_db", {
+mongoose.connect(`${DB_URI}/tokoplay_db`, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
@@ -27,8 +31,6 @@ app.use(CommentRoutes);
 app.use(ProductRoutes);
 app.use(UserRoutes);
 
-const port = 5000;
-
-app.listen(port, () => {
-  console.log(`server running at port ${port}`);
+app.listen(PORT, () => {
+  console.log(`server running at port ${PORT}`);
 });

@@ -19,6 +19,18 @@ export const getVideoById = async (req, res) => {
   }
 };
 
+export const getVideoByQuery = async (req, res) => {
+  try {
+    const video_query = req.query.q;
+    const video = await Video.find({
+      video_title: { $regex: video_query, $options: "i" },
+    });
+    res.json(video);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
 export const saveVideo = async (req, res) => {
   const video = new Video(req.body);
   try {
